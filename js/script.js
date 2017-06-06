@@ -1,5 +1,5 @@
 (function($){
-  $.fn.Center = function(){
+  $.fn.center = function(){
     this.css({
       'position' : 'fixed',
       'left' : '50%',
@@ -13,8 +13,16 @@
   }
 })(jQuery);
 
-
+function buildHtml(type){
+  var build = '<input class="form-control" name="' + type + '" id="' + type + '">';
+  var html = $('#containerInput').append(build);
+  return html;
+}
 
 $(document).ready(function(){
-  $('#login').Center();
+  console.log('ready');
+  $('#login').center();
+  $('#selectType').change(function(){
+    buildHtml($(this).val());
+  });
 });
