@@ -10,8 +10,13 @@
             <input class="form-control" type="text" name="name" value="">
             <label for="password">Password</label>
             <input type="password" name="password" value="" class="form-control">
-            <button type="submit">Go</button>
+            <div class="form-group">
+              <button type="submit" class="btn btn-success">Go</button>
+            </div>
           </div>
+
+
+
         </form>
 
 </div>
