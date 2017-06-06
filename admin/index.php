@@ -1,15 +1,19 @@
 <?php include "../inc/headerAdmin.php"; ?>
+<?php include "../auth/admin.php"; ?>
 
 <div class="container-fluid">
   <h1>Prouved me, are you Admin ?</h1>
-    <div class="form-group" id="login">
-        <form action="admin/index.php" method="post">
-          <label for="name">Login</label>
-          <input class="form-control" type="text" name="name" value="">
-          <label for="password">Password</label>
-          <input type="password" name="password" value="" class="form-control">
+
+        <form action="index.php" method="post">
+          <div class="form-group" id="login">
+            <label for="name">Login</label>
+            <input class="form-control" type="text" name="name" value="">
+            <label for="password">Password</label>
+            <input type="password" name="password" value="" class="form-control">
+            <button type="submit">Go</button>
+          </div>
         </form>
-    </div>
+
 </div>
 
 
