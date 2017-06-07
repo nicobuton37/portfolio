@@ -1,5 +1,5 @@
 <?php
 
-function message($message){
-    echo '<div id="dlMessage" class="alert alert-success" role="alert">' . $message . '</div>';
+function message($message, $mode){
+    echo '<div id="dlMessage" class="alert alert-' . $mode . '" role="alert">' . $message . '</div>';
 }
