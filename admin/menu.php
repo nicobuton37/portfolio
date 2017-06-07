@@ -8,9 +8,12 @@
       <option value="papers">Papers</option>
     </select>
   </div>
-
+<form class="typeForm" action="menu.php" method="post">
   <div class="form-group" id="containerInput">
+    
   </div>
+</form>
+
 </div>
 
 <?php include "../inc/footerAdmin.php"; ?>

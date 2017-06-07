@@ -14,15 +14,27 @@
 })(jQuery);
 
 function buildHtml(type){
-  var build = '<input class="form-control" name="' + type + '" id="' + type + '">';
-  var html = $('#containerInput').append(build);
-  return html;
+  var html = '';
+  var build = '';
+  switch(type){
+    case "languages":
+      build = '<input type="file" name="' + type + '" value="image" id="fieldAdmin">';
+    break;
+    case "projects":
+      build = '<input class="form-control type="text" name="' + type + '" value="" id="fieldAdmin" placeholder="github link...">';
+    break;
+    case "papers":
+      build = '<textarea rows="30" cols="50" class="form-control" id="fieldAdmin" placeholder="your paper text"></textarea>';
+    break;
+  }
+  html = $('#containerInput').append(build);
 }
 
 $(document).ready(function(){
   console.log('ready');
   $('#login').center();
   $('#selectType').change(function(){
+    $('#fieldAdmin').remove();
     buildHtml($(this).val());
   });
 });
