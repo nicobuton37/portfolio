@@ -1,7 +1,8 @@
 <?php include "../inc/headerAdmin.php"; ?>
 <?php include "../bd/pdo.php"; ?>
 <?php include "../control/languages.php"; ?>
-<div class="container-fluid">
+
+<div class="container-fluid" id="bodyMenu">
   <h1>You are the one !!!</h1>
   <div class="form-group row">
     <div class="col-sm-8">
@@ -22,6 +23,14 @@
 
       </div>
     </form>
+  </div>
+  <div class="col-sm-4" id="languageList">
+    <ul class="list-group">
+      <?php
+      $request = $db->query('SELECT name, image FROM languages');
+      languagesList($request);
+      ?>
+    </ul>
   </div>
 </div>
 </div>

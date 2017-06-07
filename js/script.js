@@ -32,9 +32,13 @@ function buildHtml(type){
 
 $(document).ready(function(){
   console.log('ready');
+  $('#message').remove();
   $('#login').center();
   $('#selectType').change(function(){
     $('#fieldAdmin').remove();
     buildHtml($(this).val());
+  });
+  $('#bodyMenu').on('click', '#message', function(){
+    $('#message').fadeOut(3000);
   });
 });

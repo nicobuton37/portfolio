@@ -1,5 +1,5 @@
 <?php include "../bd/pdo.php"; ?>
-<?php include "../function/alert.php"; ?>
+<?php include "../function/display.php"; ?>
 <?php
 if(isset($_FILES['languages']) && $_FILES['languages']['error'] == 0 && isset($_POST['name'])){
   $imageName = $_FILES['languages']['name'];
