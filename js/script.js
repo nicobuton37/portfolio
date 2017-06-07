@@ -18,7 +18,7 @@ function buildHtml(type){
   var build = '';
   switch(type){
     case "languages":
-      build = '<input type="file" name="' + type + '" value="image" id="fieldAdmin">';
+      build = '<input type="file" name="' + type + '" value="image" id="fieldAdmin"><button type="submit" class="btn btn-success">Submit</button>';
     break;
     case "projects":
       build = '<input class="form-control type="text" name="' + type + '" value="" id="fieldAdmin" placeholder="github link...">';

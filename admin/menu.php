@@ -1,5 +1,6 @@
 <?php include "../inc/headerAdmin.php"; ?>
 <?php include "../bd/pdo.php"; ?>
+<?php include "../control/languages.php"; ?>
 <div class="container-fluid">
   <h1>You are the one !!!</h1>
   <div class="form-group">
@@ -9,7 +10,7 @@
       <option value="papers">Papers</option>
     </select>
   </div>
-<form class="typeForm" action="menu.php" method="post">
+<form class="typeForm" action="menu.php" method="post" enctype="multipart/form-data">
   <div class="form-group" id="containerInput">
 
   </div>
