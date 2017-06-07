@@ -4,9 +4,8 @@ function message($message, $mode){
 }
 
 function languagesList($request){
-  $datas = $request->fetch();
-  foreach ($datas as $key => $value) {
-    $build = '<li class="list-group-item">' . $datas['name'] . '<img src="../img/' . $datas['image'] . '"></li>';
+  while ($datas = $request->fetch()) {
+    echo '<li class="list-group-item">' . $datas['name'] . '<img src="../img/' . $datas['image'] . '"></li>';
   }
-  echo $build;
+
 }
