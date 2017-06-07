@@ -1,4 +1,5 @@
-<?php include "../inc/headerAdmin.php" ?>
+<?php include "../inc/headerAdmin.php"; ?>
+<?php include "../bd/pdo.php"; ?>
 <div class="container-fluid">
   <h1>You are the one !!!</h1>
   <div class="form-group">
@@ -10,7 +11,7 @@
   </div>
 <form class="typeForm" action="menu.php" method="post">
   <div class="form-group" id="containerInput">
-    
+
   </div>
 </form>
 
