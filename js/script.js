@@ -38,7 +38,10 @@ $(document).ready(function(){
     $('#fieldAdmin').remove();
     buildHtml($(this).val());
   });
-  $('#bodyMenu').on('click', '#message', function(){
-    $('#message').fadeOut(3000);
+  $('#list').on('click', '#removeElementList', function(){
+    var target = $(this).parent();
+    console.log(target);
+    $(target).remove();
+
   });
 });

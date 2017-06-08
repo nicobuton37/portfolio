@@ -33,7 +33,6 @@ if(isset($_FILES['languages']) && $_FILES['languages']['error'] == 0 && isset($_
       $image_resize_name = explode('.', $_FILES['languages']['name']);
       $image_resize_name = time();
       imagejpeg($image_resize , '../img/'.$image_resize_name.'.'.$extension, 100);
-      var_dump($image_resize_name);
       move_uploaded_file($_FILES['languages']['tmp_name'], '../img/' . basename($_FILES['languages']['name']));
       $image_name = $image_resize_name . '.' . $extension;
       $request = $db->prepare('INSERT INTO languages(name, image) VALUES(:name, :image)');

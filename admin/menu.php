@@ -25,10 +25,12 @@
     </form>
   </div>
   <div class="col-sm-4" id="languageList">
-    <ul class="list-group">
+    <ul class="list-group" id="list">
       <?php
-      $request = $db->query('SELECT name, image FROM languages');
+      $request = $db->query('SELECT * FROM languages');
       languagesList($request);
+      $id = $db->query('SELECT id FROM languages');
+      removeId($id);
       ?>
     </ul>
   </div>
