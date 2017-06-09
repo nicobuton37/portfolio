@@ -25,14 +25,17 @@
     </form>
   </div>
   <div class="col-sm-4" id="languageList">
-    <ul class="list-group" id="list">
-      <?php
-      $request = $db->query('SELECT * FROM languages');
-      languagesList($request);
-      $id = $db->query('SELECT id FROM languages');
-      removeId($id);
-      ?>
-    </ul>
+    <form class="" action="menu.php" method="get">
+      <ul class="list-group" id="list">
+        <?php
+        $request = $db->query('SELECT * FROM languages');
+        languagesList($request);
+        $name = $db->query('SELECT name FROM languages');
+        removeId($name);
+        ?>
+      </ul>
+    </form>
+
   </div>
 </div>
 </div>

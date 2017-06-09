@@ -39,9 +39,10 @@ $(document).ready(function(){
     buildHtml($(this).val());
   });
   $('#list').on('click', '#removeElementList', function(){
-    var target = $(this).parent();
-    console.log(target);
-    $(target).remove();
+    var languageValue = $(this).parent().text();
+    // var target = ;
+    $(this).parent().append('<ipnut name="elementList" type="hidden" value="' + languageValue + '">');
+    $(this).parent().remove();
 
   });
 });
