@@ -13,7 +13,8 @@
       </select>
     </div>
     <div class="col-sm-4">
-      <a href="index.php" class="btn btn-info">log out</a>
+      <a href="index.php" class="btn btn-info">Log out</a>
+      <a href="manager.php" class="btn btn-info">Manager</a>
     </div>
   </div>
 <div class="row">
@@ -25,21 +26,7 @@
     </form>
   </div>
 </div>
-<div class="row">
-  <div class="col-xs-6 col-md-3" id="languageList">
-    <form class="" action="menu.php" method="get">
 
-        <?php
-        $request = $db->query('SELECT * FROM languages');
-        languagesList($request);
-        $id = $db->query('SELECT id FROM languages');
-        var_dump($id->fetch());
-        // removeId($id);
-        ?>
-
-    </form>
-  </div>
-</div>
 </div>
 
 

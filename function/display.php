@@ -5,7 +5,10 @@ function message($message, $mode){
 
 function languagesList($request){
   while ($datas = $request->fetch()) {
-    echo '<a href="#" class="thumbnail"><img src="../img/' . $datas['image'] . '"><span class="glyphicon glyphicon-remove id="removeElementList"></span></a>'; 
+    echo '<div class="target"><input type="hidden" value="'
+    . $datas['id'] . '" name="languageId"><a href="#" class="thumbnail"><img src="../img/'
+    . $datas['image'] . '"></a>'
+    . '<div class="caption"><p><a href="manager.php" class="btn btn-primary" role="submit">Remove</a></div></div>';
   }
 }
 
