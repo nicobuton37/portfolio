@@ -17,25 +17,27 @@
     </div>
   </div>
 <div class="row">
-  <div class="col-sm-8">
+  <div class="col-sm-12">
     <form class="typeForm" action="menu.php" method="post" enctype="multipart/form-data">
       <div class="form-group" id="containerInput">
 
       </div>
     </form>
   </div>
-  <div class="col-sm-4" id="languageList">
+</div>
+<div class="row">
+  <div class="col-xs-6 col-md-3" id="languageList">
     <form class="" action="menu.php" method="get">
-      <ul class="list-group" id="list">
+
         <?php
         $request = $db->query('SELECT * FROM languages');
         languagesList($request);
-        $name = $db->query('SELECT name FROM languages');
-        removeId($name);
+        $id = $db->query('SELECT id FROM languages');
+        var_dump($id->fetch());
+        // removeId($id);
         ?>
-      </ul>
-    </form>
 
+    </form>
   </div>
 </div>
 </div>

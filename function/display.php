@@ -5,13 +5,13 @@ function message($message, $mode){
 
 function languagesList($request){
   while ($datas = $request->fetch()) {
-    echo '<li class="list-group-item">' . $datas['name'] . '<img id="logo" src="../img/' . $datas['image'] . '"><a href="#" id="removeElementList"><span class="glyphicon glyphicon-remove-circle"></span></a></li>';
+    echo '<a href="#" class="thumbnail"><img src="../img/' . $datas['image'] . '"><span class="glyphicon glyphicon-remove id="removeElementList"></span></a>'; 
   }
 }
 
-function removeId($name){
-  $datas = $name->fetch();
+function removeId($id){
+  $datas = $id->fetch();
   if(isset($_GET['elementList'])){
-    var_dump($datas);
+    var_dump($id);
   }
 }

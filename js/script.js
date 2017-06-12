@@ -38,11 +38,4 @@ $(document).ready(function(){
     $('#fieldAdmin').remove();
     buildHtml($(this).val());
   });
-  $('#list').on('click', '#removeElementList', function(){
-    var languageValue = $(this).parent().text();
-    // var target = ;
-    $(this).parent().append('<ipnut name="elementList" type="hidden" value="' + languageValue + '">');
-    $(this).parent().remove();
-
-  });
 });
