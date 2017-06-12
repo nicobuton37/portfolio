@@ -13,8 +13,9 @@ function languagesList($request){
 }
 
 function removeId($id){
-  $datas = $id->fetch();
-  if(isset($_GET['elementList'])){
-    var_dump($id);
+  $datas = $id->fetchAll();
+  var_dump($datas);
+  if(isset($_POST['languageId'])){
+
   }
 }

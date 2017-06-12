@@ -14,14 +14,14 @@
       <div class="languagesList">
         <div class="row">
           <div class="col-xs-6 col-md-3" id="languageList">
-            <form class="" action="menu.php" method="get">
+            <form class="" action="menu.php" method="post">
 
                 <?php
                 $request = $db->query('SELECT * FROM languages');
                 $id = $db->query('SELECT id FROM languages');
                 languagesList($request);
-                var_dump($id->fetch());
-                // removeId($id);
+                var_dump($id->fetchAll());
+                removeId($id);
                 ?>
 
             </form>
