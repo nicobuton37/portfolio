@@ -1,12 +1,14 @@
 <?php include "../inc/headerAdmin.php"; ?>
 <?php include "../bd/pdo.php"; ?>
 <?php include "../control/languages.php"; ?>
+<?php include "../control/project.php"; ?>
 
 <div class="container-fluid" id="bodyMenu">
   <h1>You are the one !!!</h1>
   <div class="form-group row">
     <div class="col-sm-8">
       <select id="selectType" class="btn btn-success">
+        <<option value="default" selected="true">Types</option>
         <option value="projects">Projects</option>
         <option value="languages">Languages</option>
         <option value="papers">Papers</option>

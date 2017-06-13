@@ -48,4 +48,3 @@ if(isset($_FILES['languages']) && $_FILES['languages']['error'] == 0 && isset($_
       $message = 'HOLY SHIT !!!';
       message($message, 'danger');
 }
-  // move_uploaded_file($_FILES['languages'], $path);

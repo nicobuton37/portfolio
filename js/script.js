@@ -21,12 +21,27 @@ function buildHtml(type){
   switch(type){
     case "languages":
       build = '<div id="fieldAdmin"><input type="file" name="'
-      + type + '" value="image"><input type="text" name="name" value="" placeholder="Language name ? ...">'
+      + type + '" value=""><input type="text" name="name" value="" placeholder="Language name ? ...">'
       + '<button type="submit" class="btn btn-success">Submit</button></div>';
     break;
     case "projects":
-      build = '<div id="fieldAdmin"><input class="form-control type="text" name="'
-      + type + '" value="" id="fieldAdmin" placeholder="github link..."></div>';
+      build = '<div id="fieldAdmin">'
+      + '<div class="form-group">'
+      + '<input class="form-control type="text" name="name" value="" placeholder="name">'
+      + '</div>'
+      + '<div class="form-group">'
+      + '<input type="text" class="form-control name="github_link" value="" placeholder="github link...">'
+      + '</div>'
+      + '<div class="form-group">'
+      + '<textarea rows="30" cols="50" class="form-control" name="description" placeholder="description"></textarea>'
+      + '</div>'
+      + '<div class="form-group">'
+      + '<input type="file" name="image" value="">'
+      + '</div>'
+      + '<div class="form-group">'
+      + '<button type="submit" class="btn btn-success">Submit</button>'
+      + '</div>'
+      + '</div>';
     break;
     case "papers":
       build = '<div id="fieldAdmin"><textarea rows="30" cols="50" class="form-control"'

@@ -14,23 +14,35 @@
       <div class="languagesList">
         <div class="row">
           <div class="col-xs-6 col-md-3" id="languageList">
-            <form class="" action="menu.php" method="post">
+            <form action="menu.php" method="post">
 
                 <?php
+                // request for add language
                 $request = $db->query('SELECT * FROM languages');
-                $id = $db->query('SELECT id FROM languages');
+                // call function for traitment request for add
                 languagesList($request);
+                // delete row in database
                 if(isset($_GET['id'])){
                     $delete = $db->query('DELETE FROM languages WHERE id="' . $_GET['id'] . '"');
                     header('Location:manager.php');
                 }
-                // removeId();
                 ?>
 
             </form>
           </div>
         </div>
       </div>
+    </div>
+    <div class="col-sm-4">
+      <h2>Projects</h2>
+      <form action="menu.php" method="post">
+        <?php
+         ?>
+      </form>
+    </div>
+    <div class="col-sm-4">
+      <h2>Papers</h2>
+
     </div>
 
   </div>

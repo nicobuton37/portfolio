@@ -11,3 +11,9 @@ function languagesList($request){
     . '<div class="caption"><p><a href="manager.php?id=' . $datas['id'] . '" class="btn btn-primary" role="submit">Remove</a></div></div>';
   }
 }
+
+function projectsList($request){
+  while ($datas = $request->fetch()) {
+    echo 'prout';
+  }
+}
