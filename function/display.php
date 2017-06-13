@@ -8,14 +8,6 @@ function languagesList($request){
     echo '<div class="target"><input type="hidden" value="'
     . $datas['id'] . '" name="languageId"><a href="#" class="thumbnail"><img src="../img/'
     . $datas['image'] . '"></a>'
-    . '<div class="caption"><p><a href="manager.php" class="btn btn-primary" role="submit">Remove</a></div></div>';
-  }
-}
-
-function removeId($id){
-  $datas = $id->fetchAll();
-  var_dump($datas);
-  if(isset($_POST['languageId'])){
-
+    . '<div class="caption"><p><a href="manager.php?id=' . $datas['id'] . '" class="btn btn-primary" role="submit">Remove</a></div></div>';
   }
 }

@@ -20,8 +20,11 @@
                 $request = $db->query('SELECT * FROM languages');
                 $id = $db->query('SELECT id FROM languages');
                 languagesList($request);
-                var_dump($id->fetchAll());
-                removeId($id);
+                if(isset($_GET['id'])){
+                    $delete = $db->query('DELETE FROM languages WHERE id="' . $_GET['id'] . '"');
+                    header('Location:manager.php');
+                }
+                // removeId();
                 ?>
 
             </form>
