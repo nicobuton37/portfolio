@@ -14,6 +14,12 @@ function languagesList($request){
 
 function projectsList($request){
   while ($datas = $request->fetch()) {
-    echo 'prout';
+    echo '<div class="target">'
+    . '<input type="hidden" value="'
+    . $datas['id'] . '" name="projectId">'
+    . '<a href="' . $datas['github_link'] . '">' . $datas['name'] . '</a>'
+    . '<div class="caption"><p><a href="manager.php?id=' . $datas['id'] . '" class="btn btn-primary" role="submit">Remove</a></p>'
+    . '</div>'
+    . '</div>';
   }
 }

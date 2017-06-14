@@ -9,7 +9,7 @@
     <a href="menu.php" class="btn btn-info">Add</a>
   </div>
   <div class="row">
-    <div class="col-sm-4">
+    <div class="col-sm-3">
       <h2>Languages</h2>
       <div class="languagesList">
         <div class="row">
@@ -33,16 +33,30 @@
         </div>
       </div>
     </div>
-    <div class="col-sm-4">
+    <div class="col-sm-3">
       <h2>Projects</h2>
       <form action="menu.php" method="post">
         <?php
+        $request = $db->query('SELECT * FROM projects');
+        projectsList($request);
+        if(isset($_GET['id'])){
+            $delete = $db->query('DELETE FROM projects WHERE id="' . $_GET['id'] . '"');
+            header('Location:manager.php');
+        }
          ?>
       </form>
     </div>
-    <div class="col-sm-4">
+    <div class="col-sm-3">
       <h2>Papers</h2>
+      <form action="menu.php" method="post">
+          
+      </form>
+    </div>
+    <div class="col-sm-3">
+      <h2>Categories</h2>
+      <form action="menu.php" method="post">
 
+      </form>
     </div>
 
   </div>

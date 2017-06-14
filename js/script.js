@@ -30,7 +30,7 @@ function buildHtml(type){
       + '<input class="form-control type="text" name="name" value="" placeholder="name">'
       + '</div>'
       + '<div class="form-group">'
-      + '<input type="text" class="form-control name="github_link" value="" placeholder="github link...">'
+      + '<input type="text" class="form-control" name="github_link" value="" placeholder="github link...">'
       + '</div>'
       + '<div class="form-group">'
       + '<textarea rows="30" cols="50" class="form-control" name="description" placeholder="description"></textarea>'

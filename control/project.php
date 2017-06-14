@@ -1,11 +1,12 @@
 <?php include "../bd/pdo.php"; ?>
 <?php
-if(isset($_FILES['image']) && $_FILES['image']['error'] == 0 && isset($_POST['name'])
-&& isset($_POST['description']) && isset($_POST['github_link'])){
-  echo 'prout';
+if(isset($_FILES['image']) && $_FILES['image']['error'] == 0
+&& isset($_POST['name']) && isset($_POST['github_link'])
+&& isset($_POST['description'])){
   $name = $_POST['name'];
   $github_link = $_POST['github_link'];
   $description = $_POST['description'];
+
   if ($_FILES['image']['size'] <= 1000000){
     $infosfichier = pathinfo($_FILES['image']['name']);
     $extension_upload = $infosfichier['extension'];
@@ -39,7 +40,7 @@ if(isset($_FILES['image']) && $_FILES['image']['error'] == 0 && isset($_POST['na
       move_uploaded_file($_FILES['image']['tmp_name'], '../img/' . basename($_FILES['image']['name']));
       $image_name = $image_resize_name . '.' . $extension;
 
-      $request = $db->prepare("INSERT INTO projects(name, github_link, description, image) VALUES(:name, :github_link, :description, :image)");
+      $request = $db->prepare('INSERT INTO projects(name, github_link, description, image) VALUES(:name, :github_link, :description, :image)');
       $request->execute(array(
         'name' => $name,
         'github_link' => $github_link,
