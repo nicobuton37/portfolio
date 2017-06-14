@@ -33,7 +33,7 @@ function buildHtml(type){
       + '<input type="text" class="form-control" name="github_link" value="" placeholder="github link...">'
       + '</div>'
       + '<div class="form-group">'
-      + '<textarea rows="30" cols="50" class="form-control" name="description" placeholder="description"></textarea>'
+      + '<textarea rows="30" cols="50" class="form-control" id="description" name="description" placeholder="description"></textarea>'
       + '</div>'
       + '<div class="form-group">'
       + '<input type="file" name="image" value="">'
@@ -44,9 +44,36 @@ function buildHtml(type){
       + '</div>';
     break;
     case "papers":
-      build = '<div id="fieldAdmin"><textarea rows="30" cols="50" class="form-control"'
-      + 'id="fieldAdmin" placeholder="your paper text"></textarea></div>';
+      build = '<div id="fieldAdmin">'
+      + '<div class="form-group">'
+      + '<input type="text" name="title" class="form-control" placeholder="title">'
+      + '</div>'
+      + '<div class="form-group">'
+      + '<textarea name="body" id="body" rows="50" cols="30" placeholder="body" class="form-control"></textarea>'
+      + '</div>'
+      + '<div class="form-group">'
+      + '<input type="file" name="image">'
+      + '</div>'
+      + '<div class="form-group">'
+      + '<select id="categories" class="btn btn-success">'
+      + '</select>'
+      + '</div>'
+      + '<div class="form-group">'
+      + '<button type="submit" class="btn btn-success">Submit</button>'
+      + '</div>'
+      + '</div>';
     break;
+    case "categories" :
+      build = '<div class="fieldAdmin">'
+      + '<div class="form-group">'
+      + '<input type="text" name="categorie" class="form-control" placeholder="name">'
+      + '</div>'
+      + '<div class="form-group">'
+      + '<button type="submit" class="btn btn-success">Submit</button>'
+      + '</div>'
+      + '</div>';
+    break;
+
   }
   html = $('#containerInput').append(build);
 }

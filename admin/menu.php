@@ -8,10 +8,11 @@
   <div class="form-group row">
     <div class="col-sm-8">
       <select id="selectType" class="btn btn-success">
-        <<option value="default" selected="true">Types</option>
+        <option value="default" selected>Types</option>
         <option value="projects">Projects</option>
         <option value="languages">Languages</option>
         <option value="papers">Papers</option>
+        <option value="categories">Categories</option>
       </select>
     </div>
     <div class="col-sm-4">

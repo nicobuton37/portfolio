@@ -23,3 +23,9 @@ function projectsList($request){
     . '</div>';
   }
 }
+
+function caregoriesList($request){
+  while ($datas = $request->fetch()) {
+    echo "prout";
+  }
+}

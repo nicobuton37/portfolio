@@ -49,7 +49,12 @@
     <div class="col-sm-3">
       <h2>Papers</h2>
       <form action="menu.php" method="post">
-          
+
+        <script>
+                        // Replace the <textarea id="editor1"> with a CKEditor
+                        // instance, using default configuration.
+                        CKEDITOR.replace( 'paper' );
+                    </script>
       </form>
     </div>
     <div class="col-sm-3">
