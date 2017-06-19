@@ -2,6 +2,7 @@
 <?php include "../bd/pdo.php"; ?>
 <?php include "../control/languages.php"; ?>
 <?php include "../control/project.php"; ?>
+<?php include "../control/categories.php"; ?>
 
 <div class="container-fluid" id="bodyMenu">
   <h1>You are the one !!!</h1>

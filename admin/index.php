@@ -2,7 +2,7 @@
 <?php include "../auth/admin.php"; ?>
 
 <div class="container-fluid">
-  <h1>Prouved me, are you Admin ?</h1>
+  <h1>Prouved me, are you Admin ???</h1>
 
         <form action="index.php" method="post">
           <div class="form-group" id="login">
