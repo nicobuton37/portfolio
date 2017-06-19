@@ -26,6 +26,12 @@ function projectsList($request){
 
 function caregoriesList($request){
   while ($datas = $request->fetch()) {
-    echo "prout";
+    echo '<div class="target">'
+    . '<input type="hidden" value="'
+    . $datas['id'] . '" name="categorieId">'
+    . '<a href="#">' . $datas['name'] . '</a>'
+    . '<div class="caption"><p><a href="manager.php?id=' . $datas['id'] . '" class="btn btn-primary" role="submit">Remove</a></p>'
+    . '</div>'
+    . '</div>';
   }
 }
