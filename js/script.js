@@ -87,4 +87,19 @@ $(document).ready(function(){
     $('#fieldAdmin').remove();
     buildHtml($(this).val());
   });
+
+  $('#selectType').change(function() {
+    if($(this).val() == "papers"){
+      $.ajax({
+        url: "../control/categories.php",
+        type: "GET",
+        success: function(){
+          console.log('prout');
+        },
+        error : function(){
+          console.log('merde');
+        }
+      });
+    }
+  });
 });
