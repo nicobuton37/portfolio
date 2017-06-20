@@ -64,7 +64,7 @@ function buildHtml(type){
       + '</div>';
     break;
     case "categories" :
-      build = '<div class="fieldAdmin">'
+      build = '<div id="fieldAdmin">'
       + '<div class="form-group">'
       + '<input type="text" name="categorie" class="form-control" placeholder="name">'
       + '</div>'
@@ -76,6 +76,22 @@ function buildHtml(type){
 
   }
   html = $('#containerInput').append(build);
+}
+
+function ajaxLoad(){
+  setTimeout( function(){
+    $.ajax({
+      url: "../control/categories.php",
+      type: "GET",
+      success: function(datas){
+        console.log('prout');
+      },
+      error : function(){
+        console.log('merde');
+      }
+    });
+  }, 5000);
+
 }
 
 $(document).ready(function(){
@@ -90,16 +106,7 @@ $(document).ready(function(){
 
   $('#selectType').change(function() {
     if($(this).val() == "papers"){
-      $.ajax({
-        url: "../control/categories.php",
-        type: "GET",
-        success: function(){
-          console.log('prout');
-        },
-        error : function(){
-          console.log('merde');
-        }
-      });
+      ajaxLoad();
     }
   });
 });
