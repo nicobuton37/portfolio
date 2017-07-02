@@ -54,19 +54,7 @@ function buildHtml(type){
       + '<div class="form-group">'
       + '<input type="file" name="image">'
       + '</div>'
-      + '<div class="form-group">'
-      + '<select id="categories" class="btn btn-success">'
-      + '</select>'
-      + '</div>'
-      + '<div class="form-group">'
-      + '<button type="submit" class="btn btn-success">Submit</button>'
-      + '</div>'
-      + '</div>';
-    break;
-    case "categories" :
-      build = '<div id="fieldAdmin">'
-      + '<div class="form-group">'
-      + '<input type="text" name="categorie" class="form-control" placeholder="name">'
+      + '<div class="form-group" id="categories">'
       + '</div>'
       + '<div class="form-group">'
       + '<button type="submit" class="btn btn-success">Submit</button>'
@@ -81,16 +69,18 @@ function buildHtml(type){
 function ajaxLoad(){
   setTimeout( function(){
     $.ajax({
-      url: "../control/categories.php",
+      url: "categories.php",
       type: "GET",
-      success: function(datas){
-        console.log('prout');
+      dataType: "html",
+      success: function(categories){
+        // $('#categories').html(response);
+        console.log(categories);
       },
       error : function(){
         console.log('merde');
       }
     });
-  }, 5000);
+  }, 1000);
 
 }
 

@@ -57,20 +57,6 @@
                     </script>
       </form>
     </div>
-    <div class="col-sm-3">
-      <h2>Categories</h2>
-      <form action="menu.php" method="post">
-        <?php
-            $request = $db->query('SELECT * FROM categories');
-            caregoriesList($request);
-            if(isset($_GET['id'])){
-              $delete = $db->query('DELETE FROM categories WHERE id="' . $_GET['id'] . '"');
-              header('Location:manager.php');
-            }
-         ?>
-      </form>
-    </div>
-
   </div>
 </div>
 
